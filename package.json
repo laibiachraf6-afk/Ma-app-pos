@@ -1,0 +1,50 @@
+{
+  "name": "parfum-pos",
+  "version": "1.0.0",
+  "description": "نظام نقطة بيع لمحلات العطور",
+  "main": "electron/main.cjs",
+  "author": "Parfum POS",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis"
+  },
+  "devDependencies": {
+    "electron": "^38.0.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "dz.parfumpos.desktop",
+    "productName": "Parfum POS",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "sw.js",
+      "manifest.json",
+      "icon.svg",
+      "Code.gs",
+      "electron/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "ParfumPOS-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Parfum POS"
+    }
+  }
+}
