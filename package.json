@@ -2,7 +2,7 @@
   "name": "parfum-pos",
   "version": "1.0.0",
   "description": "نظام نقطة بيع لمحلات العطور",
-  "main": "electron/main.cjs",
+  "main": "main.cjs",
   "author": "Parfum POS",
   "license": "UNLICENSED",
   "scripts": {
@@ -25,7 +25,7 @@
       "manifest.json",
       "icon.svg",
       "Code.gs",
-      "electron/**/*",
+      "main.cjs",
       "package.json"
     ],
     "win": {
